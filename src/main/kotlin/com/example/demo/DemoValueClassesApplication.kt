@@ -44,7 +44,7 @@ class JacksonConfiguration {
         jacksonMapperBuilder()
             .apply {
                 // If in the line below it is used "NON_NULL" instead of "NON_EMPTY", there is no error
-                changeDefaultPropertyInclusion { it.withValueInclusion(JsonInclude.Include.NON_NULL) }
+                changeDefaultPropertyInclusion { it.withValueInclusion(JsonInclude.Include.NON_EMPTY) }
                 changeDefaultPropertyInclusion { it.withContentInclusion(JsonInclude.Include.NON_EMPTY) }
             }.build()
 }
